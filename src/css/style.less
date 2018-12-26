@@ -1,0 +1,41 @@
+
+/*=== слой фундамент ===*/
+
+@import "foundation/__normalize.less";
+
+/*=== базовый слой ===*/
+
+@import "base/__variable.less";
+@import "base/mixins/mixin.less";
+@import "base/color.less";
+@import "base/links.less";
+@import "base/grid.less";
+@import "base/typography.less";
+@import "base/bettertext.less";
+@import "base/buttons.less";
+@import "base/forms.less";
+@import "base/table.less";
+
+
+/*=== проектный слой ===*/
+@import "project/layout.less";
+@import "project/header.less";
+@import "project/footer.less";
+
+
+/*=== контекстный слой ===*/
+
+@import "context/media.less";
+
+// BASIC START //
+
+@radius: 10px;
+
+.transition (@property: all, @duration: 0.25s, @function: ease-out ) {
+    transition: @property @duration @function;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

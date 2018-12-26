@@ -1,0 +1,106 @@
+.btn{
+  display: inline-block;
+  height: 44px;
+  vertical-align: top;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 46px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  background: #ffffff;
+  color: @color-secondary;
+  position: relative;
+  cursor: pointer;
+  margin: 3px 0;
+  padding: 0 40px;
+  border: 1px solid @color-secondary-light;
+  z-index: 99;
+  transition: all 0.3s 0.05s ease;
+  &:before,
+  &:after {
+    content: '';
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transition: all 0.2s ease;
+    z-index: -1;
+  }
+  &:before {
+    height: 36px;
+    left: 0;
+    margin-top: -18px;
+    transform: scale(1, 0);
+    visibility: hidden;
+    transform-origin: 50% 100%;
+    background: @color-secondary;
+  }
+  &:after {
+    height: 36px;
+    left: -1px;
+    margin-top: -19px;
+    border: 1px solid @color-secondary-light;
+  }
+
+  &:hover,
+  &--hover{
+    color: #ffffff;
+    &::before {
+      visibility: visible;
+      transform: scale(1);
+    }
+  }
+
+  &:active,
+  &--active{
+
+  }
+
+  // Size modificator
+
+  &-size-s {
+    height: 35px;
+    width: 175px;
+    font-size: 16px;
+    line-height: 31px;
+  }
+
+  &-size-m {
+    height: 40px;
+    width: 212px;
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+  &-size-l {
+    height: 70px;
+    font-size: 18px;
+    line-height: 70px;
+    text-transform: uppercase;
+    padding: 0 25px;
+  }
+
+  // Color modificator
+
+  // Style modificator
+
+  &-mt {
+    margin-top: 35px;
+  }
+
+  &_center {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+      background: @color-additional;
+    }
+  }
+
+}
